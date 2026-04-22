@@ -1,17 +1,11 @@
 [build]
   base = "frontend"
   command = "npm install && npm run build"
-  publish = "frontend/dist"
+  publish = "dist"
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-
-[dev]
-  framework = "#custom"
-  command = "npm run dev"
-  targetPort = 5173
-  port = 8888
 
 [[redirects]]
   from = "/api/*"
