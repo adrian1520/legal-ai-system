@@ -1,7 +1,11 @@
 export default async (req: Request) => {
-  const { message, caseId } = await req.json();
+  const { caseId, message } = await req.json();
 
-  return new Response(JSON.stringify({ ok: true }));
+  return new Response(JSON.stringify({
+    ok: true,
+    caseId,
+    message
+  }));
 };
 
 export const config = {
