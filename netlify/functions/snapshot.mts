@@ -1,16 +1,11 @@
-import { getDB } from "./firebase";
-
 export default async (req: Request) => {
   const { caseId, snapshot } = await req.json();
-  const db = getDB();
 
-  await db.collection("snapshots").add({
+  return new Response(JSON.stringify({
+    ok: true,
     caseId,
-    snapshot,
-    createdAt: new Date()
-  });
-
-  return new Response(JSON.stringify({ ok: true }));
+    snapshot
+  }));
 };
 
 export const config = {
