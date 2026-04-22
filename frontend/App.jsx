@@ -9,6 +9,11 @@ export default function App() {
   const handleAction = (type) => {
     switch (type) {
       case "AKTA_CREATE":
+      case "ANALYZE":
+      case "STRATEGY":
+      case "RISKS":
+      case "CASES_LIST":
+      case "WRITE_DOC":
         setScreen("CASE");
         setCaseId("case_1");
         break;
