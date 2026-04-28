@@ -1,0 +1,35 @@
+{
+  "project": "legal-ai-system",
+  "created_at": "2026-04-28",
+  "structure": {
+    "frontend": [
+      "App.jsx",
+      "CaseView.jsx",
+      "Home.jsx",
+      "main.jsx",
+      "index.html",
+      "index.css",
+      "package.json",
+      "vite.config.js",
+      "tailwind.config.js",
+      "postcss.config.js",
+      "netlify.toml"
+    ],
+    "backend": {
+      "netlify/functions": [
+        "gpt.mts",
+        "chat.mts",
+        "case-full.mts",
+        "timeline.mts",
+        "snapshot.mts",
+        "upload.mts",
+        "firebase.ts",
+        "package.json"
+      ]
+    },
+    "root": [
+      "package.json",
+      "netlify.toml"
+    ]
+  }
+}
